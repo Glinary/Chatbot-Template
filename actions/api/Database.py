@@ -40,5 +40,7 @@ class Database:
             return response.get('text')
         else:
             return "Response does not exist."
+        
+
          
 # # ---------- DATABASE SETUP ---------- #

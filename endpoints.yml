@@ -25,12 +25,22 @@ action_endpoint:
 #    password: <password used for authentication>
 #    use_ssl: <whether or not the communication is encrypted, default false>
 
-#tracker_store:
+# tracker_store:
 #    type: mongod
-#    url: <url to your mongo instance, e.g. mongodb://localhost:27017>
-#    db: <name of the db within your mongo instance, e.g. rasa>
-#    username: <username used for authentication>
-#    password: <password used for authentication>
+#    url: m<ongodb+srv://>
+#    db: conversations
+#    username: <username>
+#    password: <password>
+
+# nlg:
+#   url: "http://localhost:5055/nlg"
+
+tracker_store:
+   type: mongo_tracker.MongoTrackerStore
+   url: mongodb://localhost:27017/
+   db: rasa
+   username: ""
+   password: ""
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers
